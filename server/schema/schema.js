@@ -10,20 +10,21 @@ const users = [
 const hobbes = [
     {
       "id": "1",
-      "hobby": "Frodo Baggins",
-      "description": "A hobbit from the Shire, tasked with destroying the One Ring in the fires of Mount Doom."
+      "hobby": "Painting",
+      "description": "Creating art using various mediums such as oils, watercolors, or acrylics."
     },
     {
       "id": "2",
-      "hobby": "Bilbo Baggins",
-      "description": "The adventurous hobbit who found the One Ring and went on an unexpected journey."
+      "hobby": "Gardening",
+      "description": "Cultivating and nurturing plants, flowers, and vegetables in a garden or outdoor space."
     },
     {
       "id": "3",
-      "hobby": "Samwise Gamgee",
-      "description": "Frodo's loyal friend and companion, who accompanies him on the quest to destroy the One Ring."
+      "hobby": "Cooking",
+      "description": "Preparing and creating dishes using various ingredients and cooking techniques."
     }
   ]
+  
 
 const comments =  [
     {
