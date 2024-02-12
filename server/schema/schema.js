@@ -6,11 +6,13 @@ const {
   GraphQLString,
   GraphQLInt,
   GraphQLSchema,
+  GraphQLList
 } = graphql;
 // Mock user data (replace with real data source)
 const users = [
   { id: "1", name: "John", age: 30 },
   { id: "2", name: "Jane", age: 25 },
+  { id: "3", name: "Emal", age: 32 },
 ];
 
 const hobbes = [
@@ -57,6 +59,20 @@ const UserType = new GraphQLObjectType({
     id: { type: GraphQLID },
     name: { type: GraphQLString },
     age: { type: GraphQLInt },
+    posts: {
+        type: new GraphQLList(PostType),
+        resolve(parent, args) {
+            // Find user by ID in the mock data
+            return posts.filter(post => post.userId === parent.id);
+          },
+    },
+    hobbes: {
+        type: new GraphQLList(HobbyType),
+        resolve(parent, args) {
+            // Find user by ID in the mock data
+            return hobbes.filter(hobby => hobby.userId === parent.id);
+          },
+    }
   }),
 });
 
